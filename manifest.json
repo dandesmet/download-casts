@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+
+    "name": "Pocket Casts Download",
+    "version": "1.0",
+    "description": "Add a download button to the Pocket Casts web player to download individual episodes",
+
+    "permissions": [
+        "http://*/"
+    ],
+
+    "content_scripts": [{
+        "matches": ["*://play.pocketcasts.com/*"],
+        "js": ["jquery-1.11.1.js", "addbuttons.js"],
+        "run_at": "document_idle",
+        "all_frames": true
+    }]
+}
